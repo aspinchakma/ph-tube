@@ -14,16 +14,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-      header {
+      nav {
         border-bottom: 2px solid rgba(23, 23, 23, 0.2);
+      }
+      .normal_button {
+        border-radius: 4px;
+        background: rgba(37, 37, 37, 0.15);
+        padding: 8px 20px 8px 20px;
+        color: rgba(37, 37, 37, 0.7);
+      }
+      .clicked_button_bg {
+        background: rgb(255, 31, 61);
+        color: white;
       }
     </style>
   </head>
   <body class="lg:w-[90%] w-[95%] mx-auto">
     <!-- header section -->
-    <header class="py-[15px] lg:py-[25px]">
-      <nav>
-        <div class="navbar bg-base-100">
+    <header>
+      <nav class="py-[10px] lg:py-[15px]">
+        <div class="navbar">
           <div class="navbar-start">
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -57,9 +67,9 @@
                 <li><a>Item 3</a></li>
               </ul>
             </div>
-            <img src="/Logo.png" alt="" />
+            <img class="max-h-[32px]" src="/Logo.png" alt="" />
           </div>
-          <div class="navbar-center hidden lg:flex">
+          <div class="navbar-center hidden lg:flex max-h-[32px]">
             <!-- Search Field -->
             <label class="input input-bordered flex items-center gap-2">
               <input type="text" class="grow" placeholder="Search" />
@@ -82,6 +92,20 @@
           </div>
         </div>
       </nav>
+      <!-- button container for different catagory -->
+      <div class="mt-5 text-center" id="catagory_container">
+        <button class="clicked_button_bg normal_button font-bold">All</button>
+      </div>
     </header>
+    <!-- Main Section -->
+    <main class="mt-8">
+      <!-- video section -->
+      <section id="videos_all" class="grid lg:grid-cols-4 gap-5">
+        <!-- Addding Modal -->
+      </section>
+    </main>
+
+    <!-- javascript file -->
+    <script src="script/script.js"></script>
   </body>
 </html>

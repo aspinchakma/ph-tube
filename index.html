@@ -26,6 +26,7 @@
       .clicked_button_bg {
         background: rgb(255, 31, 61);
         color: white;
+        font-weight: 700;
       }
     </style>
   </head>
@@ -94,18 +95,29 @@
       </nav>
       <!-- button container for different catagory -->
       <div class="mt-5 text-center" id="catagory_container">
-        <button class="clicked_button_bg normal_button font-bold">All</button>
+        <button class="clicked_button_bg normal_button" id="all_videos">
+          All
+        </button>
       </div>
     </header>
     <!-- Main Section -->
     <main class="mt-8">
       <!-- video section -->
-      <section id="videos_all" class="grid lg:grid-cols-4 gap-5">
-        <!-- Addding Modal -->
+      <section id="video_all_container">
+        <section id="videos_all" class="grid lg:grid-cols-4 gap-5">
+          <!-- Addding Modal -->
+        </section>
       </section>
+
+      <!-- categories video container -->
+      <section id="music_container" class="hidden">music</section>
+
+      <!-- comedy Container -->
+      <section id="comedy_container" class="hidden">comedy</section>
+      <section id="Drawing_container" class="hidden">Drawing</section>
     </main>
 
     <!-- javascript file -->
-    <script src="script/script.js"></script>
+    <script type="module" src="script/script.js"></script>
   </body>
 </html>

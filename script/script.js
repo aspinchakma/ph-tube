@@ -1,3 +1,5 @@
+import { coloringButton, hideSection } from "./utilites.js";
+
 //  catagories
 
 async function getCatagories() {
@@ -27,6 +29,8 @@ function showCategories(categories) {
     const button = document.createElement("button");
     button.classList.add("normal_button");
     button.classList.add("mx-1");
+    // console.log(category.category_id);
+    button.id = category.category_id;
     button.innerText = category.category;
     buttonContainer.appendChild(button);
   });
@@ -55,7 +59,7 @@ getAllVideos();
 function loadAllVideos(videos) {
   const allVideos = document.getElementById("videos_all");
   videos.forEach((video) => {
-    console.log(video.authors[0]);
+    // console.log(video.authors[0]);
     const div = document.createElement("div");
     div.innerHTML = `
     <div id="video_container" onclick="document.getElementById('my_modal_${
@@ -115,3 +119,8 @@ function loadAllVideos(videos) {
     allVideos.appendChild(div);
   });
 }
+//
+document.getElementById("catagory_container").addEventListener("click", (e) => {
+  coloringButton(e.target);
+  hideSection(e.target.id);
+});

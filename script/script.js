@@ -55,7 +55,7 @@ getAllVideos();
 function loadAllVideos(videos) {
   const allVideos = document.getElementById("videos_all");
   videos.forEach((video) => {
-    console.log(video.authors[0].verified);
+    console.log(video.authors[0]);
     const div = document.createElement("div");
     div.innerHTML = `
     <div id="video_container" onclick="document.getElementById('my_modal_${
@@ -100,7 +100,7 @@ function loadAllVideos(videos) {
                 ${video.description}
               </p>
               <p class="py-4">
-                ${video.video_id}
+                Author Name: ${video.authors[0].profile_name}
               </p>
               <div class="modal-action">
                 <form method="dialog">

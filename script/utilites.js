@@ -16,7 +16,6 @@ export function hideSection(id) {
     comedyContainer.classList.add("hidden");
     drawingContainer.classList.add("hidden");
     musicContainer.classList.remove("hidden");
-    musicContainer.classList.add("hidden");
   }
   if (id == 1003) {
     videoAllContainer.classList.add("hidden");

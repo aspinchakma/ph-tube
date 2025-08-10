@@ -288,3 +288,37 @@ function showAllComedyVideos(videos) {
     comedyChildContainer.appendChild(div);
   });
 }
+
+// load drawing videos
+
+const loadAllDrawingVideos = async () => {
+  try {
+    const res = await fetch(
+      "https://openapi.programming-hero.com/api/phero-tube/category/1005"
+    );
+    if (!res.ok) {
+      throw new Error("Server Problem");
+    }
+    const data = await res.json();
+    if (!data.category.length) {
+      showNoVideos();
+    }
+  } catch (error) {}
+};
+
+loadAllDrawingVideos();
+
+function showNoVideos() {
+  const drawiingContainer = document.getElementById("Drawing_container");
+  const div = document.createElement("div");
+
+  div.innerHTML = `
+<div class="text-center mt-[9%]">
+          <img src="/Icon.png" class="mx-auto" alt="" />
+          <p class="text-4xl font-bold mt-5">
+            Oops!! Sorry, There is no content here.
+          </p>
+        </div>
+`;
+  drawiingContainer.appendChild(div);
+}

@@ -337,7 +337,6 @@ const loadDataBySearch = async (data) => {
     );
     const getData = await res.json();
     showSearchedData(getData.videos, data);
-    console.log(getData);
   } catch (error) {}
 };
 

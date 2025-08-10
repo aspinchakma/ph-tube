@@ -4,7 +4,6 @@ const drawingContainer = document.getElementById("Drawing_container");
 const videoAllContainer = document.getElementById("video_all_container");
 
 export function hideSection(id) {
-  console.log(id);
   if (id == "all_videos") {
     videoAllContainer.classList.remove("hidden");
     comedyContainer.classList.add("hidden");
